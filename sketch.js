@@ -11,12 +11,23 @@ function setup() {
 }
 
 function draw() {
-  
+
+
   for (let i = 1; i < espLarg; i++) {
     for (let j = 1; j < espAltura; j++) {
       push();
       translate(i * width / espLarg,j * height / espAltura)
-      circle(0, 0, height / espAltura);
+      
+      X_meio = width/2;
+      Y_meio = height/2;
+      noFill();
+      stroke(55);
+      strokeWeight(4);
+      circle(X_meio, Y_meio, height/2);
+      circle(X_meio - height/3/4, Y_meio - height/18, height/12);
+      circle(X_meio + height/3/4, Y_meio - height/18, height/12);
+      line  (X_meio, 520, X_meio, 800)
+      line  (570, 400, 670, 400)
       pop();
     }
   }
